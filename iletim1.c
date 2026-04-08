@@ -1,7 +1,7 @@
 // computer-aided transmission line parameter calculator for different pole types and conductor types.
 // kocaeli university, electrical engineering department, 2026 spring semester
 // electric power transmission course project
-// written by busra gulen, 220205029 
+// by busra gulen, 220205029 
 
 #include <stdio.h>
 #include <stdlib.h>
