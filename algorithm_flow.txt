@@ -1,0 +1,51 @@
+ALGORITHM FLOW STEPS
+
+START
+
+Define frequency (f = 50 Hz), Pi number, and bundle spacing (d = e.g., 0.45 m).
+Calculate angular frequency (omega = 2 * Pi * f).
+Define structures for complex numbers and matrices/arrays to hold results.
+
+Save the characteristics of 8 different selected conductors for 154kV and 400kV voltage levels (Name, Outer Diameter, GMR, 50Hz AC Resistance) into a data structure (struct).
+Define phase conductor (x, y) coordinates for the 4 different tower types required in the project (Single circuit, single circuit 3-bundle, double circuit, double circuit 2-bundle).
+
+Select the conductor type to be processed from the list.
+Assign a constant line length (l) = 200 km (or request a different value from the user).
+
+GMD: 
+Get the coordinates of the i-th tower type.
+If i = 1 or 2 (single circuit): Calculate GMD = cuberoot(D_AB * D_BC * D_CA) using distances between phases.
+If i = 3 or 4 (double circuit): Calculate double circuit equivalent GMD using parallel and diagonal phase distances.
+
+GMR: 
+If i = 1 (unbundled): Use catalog GMR.
+If i = 2 (3-bundle): Calculate equivalent GMR_L and GMR_C using spacing d.
+If i = 3 (double circuit, unbundled): Calculate equivalent GMR between parallel conductors.
+If i = 4 (double circuit, 2-bundle): First find 2-bundle GMR with d, then calculate double circuit equivalent.
+
+Line Parameters Per Unit Length:
+If i = 1 or 2 (single circuit): R = Catalog AC Resistance / Bundle Count.
+If i = 3 or 4 (double circuit): R = (Catalog AC Resistance / Bundle Count) / 2.
+Calculate L = 0.2 * ln(GMD / GMR_L) (mH/km-phase).
+Calculate C = 55.6 / ln(GMD / GMR_C) (nF/km-phase).
+Z = R + j * (omega * L * 10^-3)
+Y = j * (omega * C * 10^-9)
+
+A, B, C, D Parameters:
+gamma = sqrt(Z * Y)
+Zc = sqrt(Z / Y)
+A = cosh(gamma * l)
+B = Zc * sinh(gamma * l)
+C_param = sinh(gamma * l) / Zc
+D = A
+
+Save all calculated values (R, L, C, Z, Y, A, B, C_param, D) to the array/matrix index representing the i-th tower type. END LOOP.
+
+Print the following headings to the screen: "Program Used: C Language", "Selected Conductor: [Name]", "Selected Tower Types and Dimensions: [Coordinates or spacing data]".
+Create the required table format using the data saved in the array:
+Columns: Tower Type 1 | Tower Type 2 | Tower Type 3 | Tower Type 4
+Rows: R (ohm/km-phase), L (mH/km-phase), C (nF/km-phase), Z (ohm/km-phase), Y (S/km-phase), A, B, C_param, D.
+Conversion: Convert and print Z, Y values and A, B, C_param, D parameters in Polar (Magnitude angle Phase) or Cartesian (Real + j Imaginary) format.
+Print the table neatly aligned on the terminal screen.
+
+FINISH
