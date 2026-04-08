@@ -35,5 +35,5 @@ The project defines 8 different conductor types:
 The program analyzes 4 different coordinate-based tower geometries:
 * **Type 1:** Single Circuit (No Bundle - PA Suspension)
 * **Type 2:** Single Circuit (3-Bundle - Horizontal Layout)
-* **Type 3:** Double Circuit (No Bundle - Vertical Layout, FA)
+* **Type 3:** Double Circuit (No Bundle - Vertical Layout, TA)
 * **Type 4:** Double Circuit (2-Bundle)
