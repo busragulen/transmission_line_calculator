@@ -1,0 +1,162 @@
+795 MCM Drake İletkeni İçin Veriler ve Hesaplamalar:
+İletken tipi: 795MCM Drake
+Düşey mesafe: 7m
+Yatay mesafe: 4m
+Direk tipi: TA tipi taşıyıcı direk
+RAA = (0,0853 * 200) / 2 = 8,53 Ohm
+dab = da'b' = 4m
+dab' = da'b = sqrt(7^2 + 4^2) = 8,062m
+DAB = DBC = sqrt[4](4 * 4 * 8,062^2) = 5,678m
+dca = dc'a' = 8m
+dca' = dc'a = 7m
+DCA = sqrt[4](8^2 * 7^2) = 7,483m
+GMD = sqrt[3](5,678 * 5,678 * 7,483) = 6,225m
+dac' = dcc' = sqrt(7^2 + 8^2) = 10,63m
+dbb' = 7m
+GMRa = GMRc = sqrt(0,01137 * 10,63) = 0,347m
+GMRb = sqrt(0,01137 * 7) = 0,282m
+GMRL = sqrt[3](0,347^2 * 0,282) = 0,323m
+L = 0,2 * ln(6,225 / 0,323) * 200 = 0,1182 H
+GMRac = GMRcc = sqrt(0,01407 * 10,63) = 0,386m
+GMRbc = sqrt(0,01407 * 7) = 0,313m
+GMRc = sqrt[3](0,386^2 * 0,313) = 0,360m
+C = (0,0556 / ln(6,225 / 0,360)) * 200 = 3,90 nF
+XL = 2 * pi * 50 * 0,1182 = 37,13 Ohm
+Z = 8,53 + j37,13 Ohm
+B = 2 * pi * 50 * (3,90 * 10^-6) = 1,225 * 10^-3 siemens
+Y = j * 1,225 * 10^-3 siemens
+
+795 MCM Tern İletkeni İçin Hesaplamalar:
+İletken tipi: 795 MCM Tern
+Rdc(75) = 0,0718 * [1 + 0,00393 * 55] = 0,08732 Ohm/km
+Rac(75) = 0,08732 * 1,02 = 0,08907 Ohm/km
+RAA = (0,08907 / 2) * 200 = 8,906 Ohm
+GMRa = GMRc = sqrt(0,01073 * 10,63) = 0,3377m
+GMRb = sqrt(0,01073 * 7) = 0,2740m
+GMRL = sqrt[3](0,3377^2 * 0,2740) = 0,315m
+L = 0,2 * ln(6,225 / 0,315) * 200 = 0,1193 H
+GMRac = GMRcc = sqrt(0,0135 * 10,63) = 0,3788m
+GMRbc = sqrt(0,0135 * 7) = 0,3074m
+GMRc = sqrt[3](0,3788^2 * 0,3074) = 0,3533m
+C = (0,0556 / ln(6,225 / 0,3533)) * 200 = 3,876 uF
+XL = 2 * pi * 50 * 0,1193 = 37,48 Ohm
+Z = 8,906 + j37,48
+Bc = 2 * pi * 50 * (3,876 * 10^-6) = 1,217 * 10^-3 siemens
+Y = j * 1,217 * 10^-3 siemens
+
+954 MCM RAIL İletkeni İçin Hesaplamalar:
+İletken Tipi: 954 MCM RAIL
+Kesit Alanı: 954000 * 5.067 * 10^-7 = 483.3865 mm^2
+Direnç (R): (2.825 * 10^-8 * 1000) / (483.3865 * 10^-6) = 0.058 Ohm/km
+%2 Artışlı Direnç (R20): 0.0595 Ohm/km
+GMD: 15.6
+GMR: 11.99 mm
+GMRL: sqrt(0.01199 * 0.4) = sqrt(0.004796) ~= 0.06925 m
+Endüktans (L): 0.2 * ln(15.6 / 0.06925) = 0.2 * ln(225.271) ~= 1.08 mH/km
+GMRC: sqrt(0.014795 * 0.4) ~= 0.07693 m
+Kapasitans (C): 0.0556 / ln(15.6 / 0.07693) = 0.010407 uF/km = 10.407 nF/km
+XL: w * L = 2 * pi * 50 * 1.08 * 10^-3 = 68.07 Ohm
+Seri Empedans (z): r + jwL = 0.0595 + j68.07 Ohm/km
+Paralel Admitans (y): G + jwC = jwC = j32.69 * 10^-6 S/km
+
+Özet Değerler (RAIL):
+R = 0.058 Ohm/km
+L = 1.08 mH/km
+C = 10.407 nF/km
+Z = 0.0595 + j68.07 Ohm/km
+Y = j32.69 * 10^-6 S/km
+A = D = 0.97784
+B = 11.9 + j67.8 Ohm
+C = 0.0006465 L 90 S
+
+1192.5 MCM BUNTING İletkeni İçin Hesaplamalar:
+İletken Tipi: 1192.5 MCM BUNTING
+Kesit Alanı: 1192500 * 5.067 * 10^-7 = 604.2397 mm^2
+Direnç (R): (2.825 * 10^-8 * 1000) / (604.2397 * 10^-6) = 0.0467 Ohm/km
+%2 Artışlı Direnç: 0.047 Ohm/km
+GMD: 15.6
+GMR: 13.41 mm
+GMRL: sqrt(0.01341 * 0.4) = 0.0732 m
+Endüktans (L): 0.2 * ln(15.6 / 0.0732) = 1.08 mH/km
+GMRC: sqrt(0.016535 * 0.4) = sqrt(0.006614) = 0.08132 m
+Kapasitans (C): 0.0556 / ln(15.6 / 0.08132) = 0.010577 uF/km = 10.577 nF/km
+XL: w * L = 2 * pi * 50 * 1.08 * 10^-3 = 68.07 Ohm
+Seri Empedans (z): r + jwL = 0.047 + j0.33 Ohm/km
+Paralel Admitans (y): j * (314.16 * 0.0105 * 10^-6) = 3.2853 * 10^-6 L 90 S/km
+
+Özet Değerler (BUNTING):
+R = 0.047 Ohm/km
+L = 1.08 mH/km
+C = 10.577 nF/km
+Z = 0.047 + j0.33 Ohm/km
+Y = 3.28 * 10^-6 L 90 S/km
+A = 0.977615
+B = 9.4 + j67.8 Ohm
+C = 0.0006487 L 90
+D = 0.977615
+
+Direk Parametreleri:
+
+T1 Direk: D: 7,4 m, DB: 0, BIZ: 2,2 m, T: 1,5 m, H: 11,6 m, Tip: Tek Devre(Demetsiz), Düzen: Tek Devre Yatay, GMD: 9,32
+3PA1 Direk: D: 11,9 m, DB: 0,457 m, BIZ: 2,2 m, H: 25 m, Tip: Tek Devre(3'lü Demet), Düzen: Tek Devre Yatay, GMD: 14,99
+FA Direk: D1: 17,7 m, D2: 18,4 m, D3: 16,2 m, DB: 0, BIZ: 4,125 m, H1: 5,85 m, H2: 5,8 m, T: 5,65 m, H: 35,2 m, Tip: Çift Devre(Demetsiz), Düzen: Çift Devre Dikey, GMD: 16,08
+2A Direk: D1: 0, D2: 0, D3: 0, D: 8,6 m, DB: 0,4 m, BIZ: 4,125 m, H1: 0, H2: 0, T: 3,545 m, H: 25 m, Tip: Çift Devre (2'li Demet), Düzen: Çift Devre Yatay, GMD: 15,6
+
+Direk 1
+
+direk tipi için tek devre, demet yok. İletkenler; 477 MCM Hawk ve 336,4 MCM Linnet
+Hat uzunluğu: 200 km
+Serra Tek devre, demet yok yapısı için Türkiye'de kullanılan en yaygın, en standart direk tipi PA Tipi Taşıyıcı Direktire
+
+477 MCM Hawk (PA Tipi Taşıyıcı) Hesaplamaları:
+A 4,5m, B 4,5m, C 9m açıklık
+GMD = küpkök(4,5 * 4,5 * 9) = 5,67 m
+Tek devre, yatay dizilim
+477 Hawk için R = 21,79 mm, Al damar sayısı = 26, GMR = 0,809
+r = 21,79 / 2 = 10,895 * 10^-3 m
+GMR_L = 0,809 * r = 0,809 * 10,895 * 10^-3 = 8,814 * 10^-3 m
+L = 0,2 * ln(GMD / GMR_L) = 0,2 * ln(5,67 / (8,814 * 10^-3)) = 1,293 mH/km
+r_k = 10,895 * 10^-3 m
+C = 0,0556 / ln(GMD / r_k) = 0,0556 / ln(5,67 / (10,895 * 10^-3)) = 0,008889 uF/km
+R_dc = ro * (l / A) = 2,828 * 10^-8 * (1000 / (241,7 * 10^-6)) = 0,117 Ohm/km
+Spiralleşme ile R_dc = 0,117 * 1,02 = 0,119 Ohm/km
+X_R = kök( (4 * u * w) / (R_dc * 10^9) ) = kök( (4 * 2 * pi * 50) / (0,119 * 10^5 * 10^9) ) = 4,027 < 3
+R_ac = 0,119 * 10^-5 * ( (kök(1 + (4,027^4 / 48)) + 1) / 2 ) = 0,1196 * 10^-5 Ohm/m
+X_L = 2 * pi * f * L = 2 * pi * 50 * 1,293 * 10^-3 = 0,406 Ohm/km
+Z = R_ac + jX_L = 0,1196 + j0,406 Ohm/km
+y = j * w * C = j * 2 * pi * 50 * 0,00889 * 10^-6 = j2,784 * 10^-6 S/km
+Z * y = (0,1196 + j0,406) * (j2,784 * 10^-6) = -1,132 * 10^-6 + j3,335 * 10^-7 = 1,180 * 10^-6 açı 163,53 derece
+gama = kök(Z * y) = 0,001086 açı 81,76 derece = 0,000155 + j0,001074 km^-1
+gama * l = 0,0310 + j0,214
+Z_c = kök(Z / y) = 389,55 açı -8,205 derece = 385,5 - j55,59
+A = D = cosh(gama * l) = cosh(0,0310) * cos(0,214) + j * sinh(0,0310) * sin(0,214) = 0,977 + j0,00083
+B = Z_c * sinh(gama * l) = (385,5 - j55,59) * [sinh(0,0310) * cos(0,214) + j * cosh(0,0310) * sin(0,214)]
+B = 23,42 + j80,04
+C = sinh(gama * l) / Z_c = [sinh(0,0310) * cos(0,214) + j * cosh(0,0310) * sin(0,214)] / (385,5 - j55,59)
+C = (0,0302 + j0,212) / (385,5 - j55,59) = -9,425 * 10^-7 + j5,49 * 10^-4
+
+336,4 MCM Linnet İletkeni Hesaplamaları:
+A 4,5m, B 4,5m, C 9m açıklık
+GMD = küpkök(4,5 * 4,5 * 9) = 5,67 m
+336,4 MCM Linnet için R = 18,3 mm, Al damar sayısı 26 adet, GMR = 0,809 * r
+r = 18,3 / 2 = 9,15 * 10^-3 m
+GMR_L = 0,809 * 9,15 * 10^-3 = 7,402 * 10^-3 m
+A = 336,4 * 0,5067 = 170,45
+R_dc = ro * (l / A) = 2,823 * 10^-8 * (1000 / (170,45 * 10^-6)) = 0,1659 Ohm/km
+Spiralleşme ile R_dc = 0,1659 * 1,02 = 0,1692 Ohm/km
+L = 0,2 * ln(5,67 / (7,402 * 10^-3)) = 1,328 mH/km
+X_R = kök( (4 * u * w) / (R_dc * 10^9) ) = kök( (4 * 2 * pi * 50) / (0,1692 * 10^5 * 10^9) ) = 0,861 < 3
+C = 0,05556 / ln(5,67 / (9,15 * 10^-3)) = 0,00868 uF/km
+X_L = 2 * pi * f * L = 2 * pi * 50 * 1,328 * 10^-3 = 0,417 Ohm/km
+Z = 0,1696 + j0,417 Ohm/km
+R_ac = 0,1692 * 10^-5 * ( (1 + kök(1 + (0,861^4 / 48))) / 2 ) = 0,1696 * 10^-5 Ohm/m
+y = j * w * C = j * 2 * pi * 50 * 0,008648 * 10^-6 = j2,716 * 10^-6 S/km
+Z * y = -1,132 * 10^-6 + j4,606 * 10^-7 = 1,222 * 10^-6 açı 157,86 derece
+gama = kök(Z * y) = 1,105 * 10^-3 açı 78,93 derece = 0,000212 + j0,001084
+gama * l = 200 * (0,000212 + j0,001084) = 0,0424 + j0,2168
+Z_c = kök(Z / y) = kök(165747,4763 açı -22,132 derece) = 407,120 açı -11,066 derece = 399,550 - j78,142
+A = D = cosh(gama * l) = cosh(0,0424) * cos(0,2168) + j * sinh(0,0424) * sin(0,2168) = 0,977 + j0,00099
+B = Z_c * sinh(gama * l) = [399,550 - j78,142] * [sinh(0,0424) * cos(0,2168) + j * cosh(0,0424) * sin(0,2168)]
+B = [399,550 - j78,142] * [0,0414 + j0,214] = 33,263 + j82,268
+C = sinh(gama * l) / Z_c = [sinh(0,0424) * cos(0,2168) + j * cosh(0,0424) * sin(0,2168)] / [399,550 - j78,142]
+C = (0,0414 + j0,214) / (399,550 - j78,142) = -1,092 * 10^-4 + j5,353 * 10^-4
