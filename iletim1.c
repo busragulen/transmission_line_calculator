@@ -83,11 +83,11 @@ int main() {
         // 3PA1 (tek dvre 3'lu demet - yatay dizilim) D = 11.9m
         {"3PA1 Tasiyici", 2, {-11.9, 0.0, 11.9, 0.0, 0.0, 0.0}, {0.0, 0.0, 0.0, 0.0, 0.0, 0.0}},
         
-        // TA (Cift devre demetsiz - Drake serisi standart tasiyici)
-        // Sag: A(4.0, 8.0), B(4.0, 4.0), C(4.0, 0) | Sol: A'(-4.0, 8.0), B'(-4.0, 4.0), C'(-4.0, 0)
+    // TA (Cift devre demetsiz - Drake serisi standart tasiyici)
+    // Sag: A(-3.5, 8.0), B(-3.5, 4.0), C(-3.5, 0) | Sol: A'(3.5, 0), B'(3.5, 4.0), C'(3.5, 8)
         {"154kV TA Tas.", 3, 
-            {4.00, 4.00, 4.00, -4.00, -4.00, -4.00}, 
-            {8.00, 4.00, 0.00, 8.00, 4.00, 0.00}},
+            {-3.5, -3.5, -3.5, 3.5, 3.5, 3.5}, 
+            {8.00 , 4.00, 0.00, 0.00, 4.00, 8.00}},
             
         // 2A (cift devre 2'li demet )
         {"2A Cift 2'li", 4, 
