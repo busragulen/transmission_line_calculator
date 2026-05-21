@@ -1,0 +1,130 @@
+154 kV Pheasant İletkeni İçin Hesaplamalar (170 km Uzun Hat Modeli):
+İletim Hattı: Çift Devre 2FA Direk, Pheasant İletken
+Hat Uzunluğu: 170 km
+Sistem Frekansı: 50 Hz (w = 314,16 rad/s)
+Hat Sonu Faz-Faz Gerilimi (U2): 154 kV
+Hat Sonu Faz-Nötr Gerilimi (V2): 88912 V
+Güç Katsayısı (pf): 0,85 Endüktif (Teta = 31,79 derece)
+Hat Parametreleri: R = 0,04 Ohm/km, L = 1,0 * 10^-3 H/km, C = 0,01 * 10^-6 F/km
+ZSIL (Temel Oran) = sqrt(1,0 * 10^-3 / 0,01 * 10^-6) = 316,23 Ohm
+S2 = (154000^2) / 316,23 = 75,0 MVA
+P2 = 75,0 * 0,85 = 63,75 MW
+Q2 = 75,0 * 0,5268 = 39,51 MVAr
+S2 Kompleks = 63,75 + j39,51 MVA
+I2 = 281,16 < -31,79 derece A
+z (Birim Empedans) = 0,04 + j0,31416 Ohm/km
+y (Birim Admitans) = j3,1416 * 10^-6 S/km
+Zc (Karakteristik Empedans) = 317,2 < -3,64 derece Ohm
+gama = 0,063 * 10^-3 + j0,995 * 10^-3 1/km
+gama * l = 0,0107 + j0,1691 radyan
+cosh(gama*l) = 0,9857 + j0,0018
+sinh(gama*l) = 0,0105 + j0,1683
+V1 = (87644 + j160) + (9464 + j11667) = 97108 + j11827 V = 97825 < 6,95 derece V
+U1 (Faz-Faz) = 169,4 kV
+I1 = (235,84 - j145,58) + (-0,05 + j47,26) = 235,79 - j98,32 A = 255,45 < -22,64 derece A
+S1 = 74,97 < 29,59 derece MVA
+P1 = 65,19 MW
+Q1 = 37,02 MVAr
+pf1 = 0,869 Endüktif
+Gerilim Regülasyonu (%VR) = %11,62
+Hat Verimi = %97,79
+
+154 kV Pheasant İletkeni İçin Hesaplamalar (120 km Uzun Hat Modeli):
+Hat Uzunluğu: 120 km
+Hat Sonu Faz-Nötr Gerilimi (V2): 88,91 kV
+Güç Katsayısı (pf): 0,85 Endüktif
+R0 = 0,02838 Ohm/km
+L0 = 0,626 mH/km
+C0 = 0,00798 uF/km
+Z = 0,02838 + j0,1966 Ohm/km
+y = j2,507 * 10^-6 S/km
+Zc = 280,4 - j20,1 Ohm
+gama = 0,00055 + j0,000703 1/km
+A = D = 3,39 + j23,5 Ohm
+C_Sabiti = -0,5 * 10^-6 + j0,3 * 10^-3 S
+S2 = 84,27 MVA
+P2 = 71,63 MW
+Q2 = 44,39 MVAr
+I2 = 0,316 < -31,78 derece kA
+V1 = 93,40 + j5,78 kV
+U1 = 162,0 kV
+I1 = 0,26 A
+S1 = 72,42 + j43,0 MVA
+Gerilim Regülasyonu = %5,632
+Normal Verim = %98,0
+
+120 km Pheasant - Kompanzasyon ve Aşırı Yük Durumları:
+%30 Kompanzasyon: U1 = 159,1 kV, %Reg = %3,5, Verim = %99,0
+%50 Kompanzasyon: U1 = 157,2 kV, %Reg = %2,31, Verim = %99,1
+Aşırı Yük (Kompsuz): U1 = 148,0 kV, %Reg = %66,0
+Aşırı Yük (%30 Komp): U1 = 130,7 kV, %Reg = %47,4
+Aşırı Yük (%50 Komp): U1 = 119,2 kV, %Reg = %34,9
+
+400 kV Cardinal İletkeni İçin Hesaplamalar (300 km Tek 3'lü Demet - 3A1):
+Hat Uzunluğu: 300 km
+Sistem Frekansı: 50 Hz
+Güç Katsayısı (pf): 0,9 Kapasitif
+z (Birim Empedans) = 0,06 + j0,31416 Ohm/km
+y (Birim Admitans) = j3,1416 * 10^-6 S/km
+Z_toplam = 18 + j94,248 Ohm
+Y_toplam = j9,42438 * 10^-4 S
+Zc = 319,07 < -5,406 derece Ohm
+gama = 0,0284 + j0,2993 1/km
+cosh(yl) = 0,9559 + j0,0086
+sinh(yl) = 0,02708 + j0,2950
+S2 = 506,0 MVA
+P2 = 455,4 MW
+Q2 = 220,56 MVAr (Şebekeye Verilen)
+S2 Kompleks = 455,4 - j220,56 MVA = 506,0 < -25,84 derece MVA
+I2 = 730,35 < 25,84 derece A
+V1 = 202549 + j68990 = 213975 < 18,80 derece V
+U1 (Faz-Faz) = 370,061 kV
+I1 = 647 + j311 = 718 < 25,72 derece A
+S1 = 460,9 < -6,92 derece MVA
+P1 = 456,0 MW
+Q1 = 55,42 MVAr
+pf1 = 0,99 Kapasitif
+Gerilim Regülasyonu (%GR) = %3,07
+Hat Verimi = %99,86
+
+300 km Cardinal - Kompanzasyon ve Aşırı Yük Durumları:
+Nominal Yük %30 Kompanzasyon: U1 = 381,82 kV, P1 = 488,14 MW, %GR = -%1,50, Verim = %93,29
+Nominal Yük %50 Kompanzasyon: U1 = 391,20 kV, P1 = 488,34 MW, %GR = %0,01, Verim = %93,26
+Aşırı Yük (10x) %30 Kompanzasyon: U1 = 874,73 kV, P1 = 7413,18 MW, %GR = %125,66, Verim = %61,43
+Aşırı Yük (10x) %50 Kompanzasyon: U1 = 717,24 kV, P1 = 7430,10 MW, %GR = %83,36, Verim = %61,29
+
+400 kV Cardinal İletkeni İçin Hesaplamalar (250 km - Serra Yavuz Notları):
+Hat Uzunluğu: 250 km
+Sistem Frekansı: 50 Hz (w = 314,16 rad/s)
+Hat Sonu Faz-Faz Gerilimi (U2): 400 kV
+Hat Sonu Faz-Nötr Gerilimi (V2): 230,940 kV
+Güç Katsayısı (pf): 0,9 Kapasitif
+R = 0,01967 Ohm/km, L = 0,95717 mH/km, C = 11,79427 * 10^-9 F/km
+Z_birim = 0,01967 + j0,3007 Ohm/km = 0,30134 < 86,257 derece
+Y_birim = j3,7052 * 10^-6 S/km = 3,7052 * 10^-6 < 90 derece
+Zc = 285,182 < -1,87 derece Ohm
+gama = 3,45156 * 10^-5 + j1,0560 * 10^-3 1/km
+gama * l = 8,6289 * 10^-3 + j0,2641
+A = D = 0,9650 + j0,00225
+B = 4,793 + j74,0305
+C_sabiti = j9,121 * 10^-4 S
+S2 = 561,045 MVA
+P2 = 504,940 MW
+Q2 = -244,545 MVAr
+I2 = 0,809 < 25,841 derece kA
+V1 = 207,955 < 15,655 derece kV
+U1 = 360,190 < 15,653 derece kV
+I1 = 0,893 < 38,218 derece kA
+S1 = 514,461 - j213,781 MVA
+P1 = 514,461 MW
+Q1 = -213,781 MVAr
+pf1 = 0,923 Kapasitif
+Gerilim Regülasyonu = -%6,686
+Hat Verimi = %98,149
+
+250 km Cardinal - Kompanzasyon ve Aşırı Yük Durumları:
+Nominal Yük %30 Kompanzasyon: U1 = 371,11 kV, %GR = -%4,91, Verim = %97,99
+Nominal Yük %50 Kompanzasyon: U1 = 379,80 kV, %GR = -%3,371, Verim = %97,98
+Aşırı Yük (Kompsuz): U1 = 967,39 kV, %GR = %159,02, Verim = %84,17
+Aşırı Yük (%30 Komp): U1 = 701,38 kV, %GR = %79,70, Verim = %84,07
+Aşırı Yük (%50 Komp): U1 = 550,48 kV, %GR = %40,05, Verim = %84,01
