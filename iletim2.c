@@ -233,6 +233,13 @@ int main() {
 
     printf("\n--- B SIKKI: Hat Profili  ---\n");
     printf("x(km),V_FazFaz(kV),P(MW),Q(MVAr)\n");
+    
+    // B icin CSV 
+    FILE *fp_b = fopen("hat_profili.csv", "w");
+    if (fp_b != NULL) {
+        fprintf(fp_b, "x,V_FazFaz,P,Q\n"); // CSV titles
+    }
+
     for(int i = 0; i <= 10; i++) {
         double x = i * (l / 10.0);
         double complex gx = hat.gamma * x;
@@ -240,11 +247,30 @@ int main() {
         double complex I_x = I2 * ccosh(gx) + (V2 / hat.Zc) * csinh(gx);
         double complex S_x = 3.0 * V_x * conj(I_x);
         
-        printf("%.1f, %.3f, %.3f, %.3f\n", x, (sqrt(3.0)*cabs(V_x))/1000.0, creal(S_x)/1e6, cimag(S_x)/1e6);
+        double v_faz_faz = (sqrt(3.0)*cabs(V_x))/1000.0;
+        double p_mw = creal(S_x)/1e6;
+        double q_mvar = cimag(S_x)/1e6;
+
+        // konsola yazdir
+        printf("%.1f, %.3f, %.3f, %.3f\n", x, v_faz_faz, p_mw, q_mvar);
+        
+        // dosyaya yazdir
+        if (fp_b != NULL) {
+            fprintf(fp_b, "%.1f,%.3f,%.3f,%.3f\n", x, v_faz_faz, p_mw, q_mvar);
+        }
     }
+    if (fp_b != NULL) fclose(fp_b);
+
 
     printf("\n--- C SIKKI: P-V Egrisi ---\n");
     printf("k(Yük Carpanı),P1(MW),U1(kV)\n");
+    
+    // C icin CSV dosyasi olusturma 
+    FILE *fp_c = fopen("pv_egrisi.csv", "w");
+    if (fp_c != NULL) {
+        fprintf(fp_c, "k,P1,U1\n"); // CSV titles
+    }
+
     for(double k = 0.1; k <= 1.55; k += 0.1) {
         double complex S2_k = k * S2_kompleks;
         double complex I2_k = conj(S2_k / (3.0 * V2));
@@ -253,8 +279,18 @@ int main() {
         double complex I1_k = hat.C_param * V2 + hat.D * I2_k;
         double complex S1_k = 3.0 * V1_k * conj(I1_k);
         
-        printf("%.1f, %.3f, %.3f\n", k, creal(S1_k)/1e6, (sqrt(3.0)*cabs(V1_k))/1000.0);
+        double p1_k_mw = creal(S1_k)/1e6;
+        double u1_k_kv = (sqrt(3.0)*cabs(V1_k))/1000.0;
+
+        // konsola yazdir
+        printf("%.1f, %.3f, %.3f\n", k, p1_k_mw, u1_k_kv);
+        
+        // dosyaya yazdir
+        if (fp_c != NULL) {
+            fprintf(fp_c, "%.1f,%.3f,%.3f\n", k, p1_k_mw, u1_k_kv);
+        }
     }
+    if (fp_c != NULL) fclose(fp_c);
 
     printf("\n--- D SIKKI: Seri Kompanzasyon Analizi ---\n");
     double complex I2_asiri = I2 * 10.0; // 10S2 durumu
@@ -292,6 +328,10 @@ int main() {
         printf("  > Nominal Yuk(S2):  U1 = %6.2f kV | Verim: %%%5.2f | Reg: %%%.2f\n", sqrt(3)*cabs(V1_n)/1000.0, verim_n, reg_n);
         printf("  > Asiri Yuk(10xS2): U1 = %6.2f kV | Verim: %%%5.2f | Reg: %%%.2f\n", sqrt(3)*cabs(V1_a)/1000.0, verim_a, reg_a);
     }
+
+    // c programi bitmeden py cizim scriptini cagir
+    printf("\nGrafikler cizdiriliyor...\n");
+    system("python3 cizim.py"); // 
 
     printf("\n========================================================================================================\n\n");
     return 0;
